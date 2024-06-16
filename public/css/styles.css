@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+li, a, button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #24252A;
+}
+
+.logo {
+  cursor: pointer;
+  color: white;
+  margin-right: auto;
+
+}
+
+.nav_ul {
+  list-style: none;
+  
+}
+
+.nav_ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_ul li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_ul li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin: 0 2px;
+  
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+body {
+  background-color: #2f2f31;
+  
+}
+
+.login-main, .register-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.wrapper {
+  position: relative;
+  width: 420px;
+  height: 380px;
+  background: transparent;
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: height .2s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .from-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper.register {
+  height: 430px;
+}
+
+.wrapper h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper .register-link, .wrapper .login-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px 0 15px;
+}
+
+.register-link p a, .login-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover, .login-link p a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  background-color: #fff;
+  width: 100%;
+  color: #000;
+}
+/*
+.wrapper .form-box.login {
+  transition: transform .18 ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+
+}
+
+.wrapper.active .form-box.register {
+  position: transform .18s ease;
+  transform: translateX(0);
+
+}
+*/
+  
+#listings {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.listing {
+  background-color: rgba(0, 136, 169, 1);
+  border-radius: 10px;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  width: 230px;
+  height: 130px;
+  float: left;
+  display: inline;
+
+}
+
+.listing.zoomed {
+  transform: scale(2);
+  border: 2px solid black;
+}
+
+.zoom-glass {
+  height: 20px;
+  width: 20px;
+}
+  
+footer {
+  background-color: #24252A;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.add-listing-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #24252A;
+  color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+.form-container input,
+.form-container button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+
+}
+.form-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: left;
+  
+}
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background-color: #cc0000;
+}
+
+.contact-div {
+  color: white;
+
+  
+}
